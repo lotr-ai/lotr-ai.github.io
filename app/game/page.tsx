@@ -28,12 +28,12 @@ export default function GamePage() {
                         Maceraya hazırsan "oyuna başla" yazıp başlayabilirsin.
                     </p>
 
-                    <audio controls className="mt-6">
+                    <audio controls className="flex flex-col items-left justify-center w-full flex-1 px-5 text-justify max-w-4xl">
                         <source src="/lotr.wav" type="audio/wav" />
                         Your browser does not support the audio element.
                     </audio>
 
-                    <ul className='pb-24 pt-4'>
+                    <ul className="flex flex-col items-left justify-center w-full flex-1 px-5 text-justify max-w-4xl">
                         {messages.length > 0
                             ? messages.map(m => (
                                 <li key={m.id} className="whitespace-pre-wrap my-2">
@@ -47,7 +47,7 @@ export default function GamePage() {
                             : null}
                     </ul>
 
-                    <form className="mt-6" onSubmit={handleSubmit}>
+                    <form className="flex flex-col items-left justify-center w-full flex-1 px-5 text-justify max-w-4xl" onSubmit={handleSubmit}>
                         <input
                             className="p-2 mt-6 text-2xl text-black bg-gray-100 rounded-lg sm:w-full"
                             type="text"
