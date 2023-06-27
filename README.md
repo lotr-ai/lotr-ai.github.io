@@ -1,1 +1,1 @@
-live: https://lotr-ai.vercel.app/
+live: http://yuzuklerinefendisi.org/
