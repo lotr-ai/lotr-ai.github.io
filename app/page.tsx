@@ -3,52 +3,38 @@
 import { useChat } from 'ai/react'
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import imagePath from '../public/assets/sam-wise.png'
+import imagePath from '../public/assets/ring.png'
+import Link from 'next/link'
 
-export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat()
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let lastChild = contentRef.current?.lastElementChild
-    lastChild?.scrollIntoView({
-      block: 'end',
-      inline: 'end',
-      behavior: 'smooth'
-    })
-  }, [messages])
-
+export default function Home() {
   return (
-    <div ref={contentRef} className="flex flex-col max-w-md mx-auto">
-      <h1 className="mb-8 text-4xl font-bold text-center">Orta Dünyaya Hoşgeldin</h1>
+    <>
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-800">
+        <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+          <Image
+            src={imagePath}
+            alt="Samwise Gamgee"
+            width={200}
+            height={200}
+          />
 
-      <div className="mb-8 text-center border border-gray-300 rounded shadow-xl border-radius-2xl">
-        <Image src={imagePath} alt={'Sam Wise'} />
+          <h1 className="text-6xl font-bold text-white">
+            Yüzüklerin Efendisi
+          </h1>
+
+          <p className="mt-1 text-white">
+            Bu oyunda Yüzüklerin Efendisi'nin dünyasında geçen bir hikaye yazacağız. Oyunu oynarken, hikayeyi yazarken ve hikayeyi okurken eğlenmeniz dileğiyle.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
+            <Link href="/game">
+              <h1 className="p-6 mt-6 text-2xl text-white bg-gray-800 rounded-lg cursor-pointer hover:bg-gray-700 sm:w-full">
+                Oyuna Başla
+              </h1>
+            </Link>
+          </div>
+        </main>
       </div>
-
-      <p>
-        <strong>Merhaba Sam</strong> Orta Dünya'ya hoşgeldin. Burada seni bekleyen çok şey var. Lütfen "oyuna başla" yazarak oyunu başlat.
-      </p>
-
-      <ul className='pb-24 pt-4'>
-        {messages.length > 0
-          ? messages.map(m => (
-            <li key={m.id} className="whitespace-pre-wrap my-2">
-              {m.role === 'user' ? <strong>Sam Wise:</strong> : <strong>AI:</strong>}
-              {m.content}
-            </li>
-          ))
-          : null}
-      </ul>
-
-      <form onSubmit={handleSubmit}>
-        <input
-          className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl outline-4 focus:outline-offset-4 focus:outline-blue-500"
-          value={input}
-          placeholder="Say something..."
-          onChange={handleInputChange}
-        />
-      </form>
-    </div>
-  )
+    </>
+  );
 }

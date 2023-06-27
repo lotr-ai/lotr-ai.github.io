@@ -18,12 +18,12 @@ export async function POST(req: Request) {
   // Ask OpenAI for a streaming chat completion given the prompt
   messages.unshift({
     content: `Bu bir text tabanlı oyundur. 
-    Orta dünyada geçmektedir. Sam Wise adında bir karakteri yönetiyorsunuz. Sam bir hobbittir. 
-    Sam ve Frodo bir görev için yola çıkarlar.
+    Orta dünyada geçmektedir. Frodo Baggins adında bir karakteri yönetiyorsunuz. Frodo bir hobbittir. 
+    Samwise ve Frodo bir görev için yola çıkarlar.
     ve oyun devam eder.
     Oyunu bitirmek için Frodo'yu Mordor'a götürmelisiniz.
-    Bunun için Sam'i yönlendirin.
-    Sam'e her seferinde kısa kısa 3 tane alternatif sun.
+    Bunun için Frodo'yu yönlendirin.
+    Frodo'ya her seferinde kısa kısa 3 tane alternatif sun.
     `,
     role: 'user'
   })
