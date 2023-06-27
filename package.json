@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "next build && next export && touch ./out/_next/.nojekyll && gh-pages -d out"
+    "lint": "next lint"
   },
   "dependencies": {
     "ai": "2.0.1",
