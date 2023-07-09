@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <Script 
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-YCQ8NN3XN5"
           strategy="afterInteractive"
         />
@@ -33,6 +33,11 @@ export default function RootLayout({
             gtag('config', 'G-YCQ8NN3XN5');
             `,
           }}
+        />
+        <Script
+          src='https://kit.fontawesome.com/d193e87253.js'
+          strategy="afterInteractive"
+          crossOrigin='anonymous'
         />
 
       </head>

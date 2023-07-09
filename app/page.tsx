@@ -1,7 +1,4 @@
 'use client'
-
-import { useChat } from 'ai/react'
-import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import imagePath from '../public/assets/ring.png'
 import Link from 'next/link'
@@ -13,7 +10,7 @@ export default function Home() {
         <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
           <Image
             src={imagePath}
-            alt="Samwise Gamgee"
+            alt="Yüzüklerin Efendisi"
             width={200}
             height={200}
           />
@@ -34,6 +31,11 @@ export default function Home() {
             </Link>
           </div>
         </main>
+        <footer className="flex items-center justify-center w-full h-24 border-t mt-10">
+          <span className="text-sm text-white">
+            Powered by Muhtalip Dede
+          </span>
+        </footer>
       </div>
     </>
   );
