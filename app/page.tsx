@@ -1,6 +1,11 @@
 'use client'
 import Image from 'next/image'
 import imagePath from '../public/assets/ring.png'
+import aragorn from '../public/assets/aragorn.png'
+import gandalf from '../public/assets/gandalf.png'
+import frodo from '../public/assets/frodo.png'
+import gimli from '../public/assets/gimli.png'
+import legolas from '../public/assets/legolas.png'
 import Link from 'next/link'
 
 export default function Home() {
@@ -22,6 +27,34 @@ export default function Home() {
           <p className="mt-1 text-white">
             Bu oyunda Yüzüklerin Efendisi'nin dünyasında geçen bir hikaye yazacağız. Oyunu oynarken, hikayeyi yazarken ve hikayeyi okurken eğlenmeniz dileğiyle.
           </p>
+
+          <div className="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-5">
+            <Image
+              src={aragorn}
+              alt="Aragorn"
+              height={200}
+            />
+            <Image
+              src={gandalf}
+              alt="Gandalf"
+              height={200}
+            />
+            <Image
+              src={frodo}
+              alt="Frodo"
+              height={250}
+            />
+            <Image
+              src={gimli}
+              alt="Gimli"
+              height={200}
+            />
+            <Image
+              src={legolas}
+              alt="Legolas"
+              height={200}
+            />
+          </div>
 
           <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
             <Link href="/game">
