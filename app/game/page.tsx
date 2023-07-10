@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai-edge'
 import { OpenAIStream, StreamingTextResponse } from 'ai'
 
-const config = new Configuration({ apiKey: "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" })
+const config = new Configuration({ apiKey: "" })
 const openai = new OpenAIApi(config)
 
 export default function GamePage() {
